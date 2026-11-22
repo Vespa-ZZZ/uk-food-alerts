@@ -1,0 +1,21 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "UK Food Alerts",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Alert table",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "results": {
+            "type": "string",
+            "title": "All alert fields (JSON)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        },
+        "summary": {
+            "type": "string",
+            "title": "Run summary (JSON)",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/RUN_SUMMARY"
+        }
+    }
+}

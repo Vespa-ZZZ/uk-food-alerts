@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "@id": "https://data.food.gov.uk/food-alerts/id.json?_view=full&_limit=50",
+    "publisher": "Food Standards Agency",
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "licenseName": "OGL 3",
+    "version": "2.0.1",
+    "limit": 50
+  },
+  "items": [
+    {
+      "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-06-2018",
+      "notation": "FSA-AA-06-2018",
+      "type": [
+        "http://data.food.gov.uk/food-alerts/def/AA",
+        "http://data.food.gov.uk/food-alerts/def/Alert"
+      ],
+      "created": "2018-01-26",
+      "modified": "2018-01-29T16:42:26+00:00",
+      "alertURL": "https://www.food.gov.uk/news-alerts/alert/FSA-AA-06-2018",
+      "title": "Community Foods is recalling ‘Natural Days Ground Rice Flour’ because of undeclared milk",
+      "status": {
+        "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+        "label": "Published"
+      },
+      "problem": [
+        {
+          "riskStatement": "Milk This product contains milk, making it a possible health risk for anyone with an allergy or intolerance to milk or milk constituents.",
+          "allergen": [
+            {
+              "@id": "http://data.food.gov.uk/codes/alerts/def/allergen/milk",
+              "label": "Milk",
+              "notation": "milk",
+              "prefLabel": "Milk"
+            }
+          ]
+        }
+      ],
+      "productDetails": [
+        {
+          "productName": "Natural Days Ground Rice Flour",
+          "packSizeDescription": "500g",
+          "batchDescription": [
+            {
+              "lotNumber": "Lot 7231 C3 12:16",
+              "bestBeforeDate": "2019-02-15",
+              "bestBeforeDescription": "Feb 2019"
+            }
+          ]
+        }
+      ],
+      "reportingBusiness": {
+        "commonName": "Community Foods"
+      }
+    },
+    {
+      "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-05-2018",
+      "notation": "FSA-AA-05-2018",
+      "type": [
+        "http://data.food.gov.uk/food-alerts/def/AA",
+        "http://data.food.gov.uk/food-alerts/def/Alert"
+      ],
+      "created": "2018-01-26",
+      "modified": "2018-01-29T16:30:39+00:00",
+      "alertURL": "https://www.food.gov.uk/news-alerts/alert/FSA-AA-05-2018",
+      "title": "[Title withheld]",
+      "status": {
+        "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+        "label": "Published"
+      },
+      "problem": [
+        {
+          "riskStatement": "Milk This product contains milk making it a possible health risk for individuals with an allergy or intolerance to milk or milk constituents.",
+          "allergen": [
+            {
+              "@id": "http://data.food.gov.uk/codes/alerts/def/allergen/milk",
+              "label": "Milk",
+              "notation": "milk",
+              "prefLabel": "Milk"
+            }
+          ]
+        }
+      ],
+      "productDetails": [
+        {
+          "productName": "Wikinger Hot Dogs",
+          "packSizeDescription": "720g (Glass Jar)",
+          "batchDescription": [
+            {
+              "lotNumber": "200676",
+              "bestBeforeDate": "2019-10-30",
+              "bestBeforeDescription": "30/10/2019"
+            },
+            {
+              "lotNumber": "200676",
+              "bestBeforeDate": "2019-11-01",
+              "bestBeforeDescription": "01/11/2019"
+            },
+            {
+              "lotNumber": "200953",
+              "bestBeforeDate": "2019-11-06",
+              "bestBeforeDescription": "06/11/2019"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-05-2018",
+      "notation": "FSA-PRIN-05-2018",
+      "type": [
+        "http://data.food.gov.uk/food-alerts/def/Alert",
+        "http://data.food.gov.uk/food-alerts/def/PRIN"
+      ],
+      "created": "2018-02-13",
+      "modified": "2018-02-14T16:20:48.043Z",
+      "alertURL": "https://www.food.gov.uk/news-alerts/alert/FSA-PRIN-05-2018",
+      "title": "Quorn recalls its Chilled Quorn™ Tikka Masala with Basmati Rice 400g product because it may contain pieces of rubber",
+      "status": {
+        "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+        "label": "Published"
+      },
+      "country": [
+        {
+          "@id": "http://data.food.gov.uk/codes/geographies/countries/GB-ENG",
+          "label": [
+            "England",
+            "England"
+          ]
+        },
+        {
+          "@id": "http://data.food.gov.uk/codes/geographies/countries/GB-NIR",
+          "label": [
+            "Northern Ireland",
+            "Northern Ireland"
+          ]
+        }
+      ],
+      "problem": [
+        {
+          "riskStatement": "Products may contain pieces of flexible rubber which could represent a safety risk."
+        }
+      ],
+      "productDetails": [
+        {
+          "productName": " Quorn™ Tikka Masala with Basmati Rice (chilled)",
+          "packSizeDescription": "400g",
+          "batchDescription": [
+            {
+              "useByDate": "2018-03-01",
+              "useByDescription": " 1 March 2018"
+            },
+            {
+              "useByDate": "2018-03-02",
+              "useByDescription": "2 March 2018"
+            },
+            {
+              "useByDate": "2018-03-03",
+              "useByDescription": "3 March 2018"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-10-2018-update-01",
+      "notation": "FSA-PRIN-10-2018-update-01",
+      "type": [
+        "http://data.food.gov.uk/food-alerts/def/Alert",
+        "http://data.food.gov.uk/food-alerts/def/PRIN"
+      ],
+      "created": "2018-03-26",
+      "modified": "2018-03-28T15:17:52.379Z",
+      "alertURL": "https://www.food.gov.uk/news-alerts/alert/FSA-PRIN-10-2018-update-01",
+      "title": "AKM Foods Limited recalls further Zaiqa GoGo Pan Masala Mouth Freshener products because they contain Rhodamine B",
+      "status": {
+        "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+        "label": "Published"
+      },
+      "country": [
+        {
+          "@id": "http://data.food.gov.uk/codes/geographies/countries/GB-ENG",
+          "label": [
+            "England",
+            "England"
+          ]
+        }
+      ],
+      "problem": [
+        {
+          "riskStatement": "Rhodamine B is an illegal dye which may pose a risk to health."
+        }
+      ],
+      "productDetails": [
+        {
+          "productName": "Zaiqa GoGo Pan Masala Mouth Freshener",
+          "packSizeDescription": "160g",
+          "batchDescription": [
+            {
+              "bestBeforeDescription": "end of 30 May 2019"
+            }
+          ]
+        },
+        {
+          "productName": "Zaiqa Mix Pan Masala Mouth Freshener",
+          "packSizeDescription": "160g",
+          "batchDescription": [
+            {
+              "bestBeforeDescription": "end of 30 May 2019"
+            }
+          ]
+        },
+        {
+          "productName": "Zaiqa Mint Pan Masala Mouth Freshener",
+          "packSizeDescription": "150g",
+          "batchDescription": [
+            {
+              "bestBeforeDescription": "end of 30 May 2019"
+            }
+          ]
+        },
+        {
+          "productName": "Zaiqa Coconut Pan Masala Mouth Freshener",
+          "packSizeDescription": "150g",
+          "batchDescription": [
+            {
+              "bestBeforeDescription": "end of 30 May 2019"
+            }
+          ]
+        }
+      ],
+      "reportingBusiness": {
+        "commonName": "AKM Foods Limited"
+      }
+    }
+  ]
+}

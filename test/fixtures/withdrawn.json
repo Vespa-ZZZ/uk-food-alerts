@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "@id": "https://data.food.gov.uk/food-alerts/id.json?_view=full&_limit=5&_offset=0&_sort=-modified&_sort=notation&status=http%3A%2F%2Fdata.food.gov.uk%2Fcodes%2Falerts%2Fdef%2Fstatus%2Fwithdrawn",
+    "publisher": "Food Standards Agency",
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "licenseName": "OGL 3",
+    "version": "2.0.1",
+    "limit": 5
+  },
+  "items": [
+    {
+      "@id": "http://data.food.gov.uk/food-alerts/id/FSA-AA-56-2019",
+      "notation": "FSA-AA-56-2019",
+      "type": [
+        "http://data.food.gov.uk/food-alerts/def/AA",
+        "http://data.food.gov.uk/food-alerts/def/Alert"
+      ],
+      "created": "2019-06-06",
+      "modified": "2019-06-06T16:29:57.78Z",
+      "alertURL": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-56-2019",
+      "title": "Tesco recalls Tesco Turkish Inspired Tomato Seasoning because of undeclared milk",
+      "status": {
+        "@id": "http://data.food.gov.uk/codes/alerts/def/status/withdrawn",
+        "label": "Withdrawn"
+      },
+      "problem": [
+        {
+          "riskStatement": "Milk This product contains milk making it a possible health risk for anyone with an allergy or intolerance to milk or milk constituents.",
+          "allergen": [
+            {
+              "@id": "http://data.food.gov.uk/codes/alerts/def/allergen/milk",
+              "label": "Milk",
+              "notation": "milk",
+              "prefLabel": "Milk"
+            }
+          ]
+        }
+      ],
+      "productDetails": [
+        {
+          "productName": "Tesco Turkish Inspired Tomato Seasoning",
+          "packSizeDescription": "25g",
+          "batchDescription": [
+            {
+              "bestBeforeDescription": "December 2019 & January 2020"
+            }
+          ]
+        }
+      ],
+      "reportingBusiness": {
+        "commonName": "Tesco"
+      }
+    },
+    {
+      "@id": "http://data.food.gov.uk/food-alerts/id/FSA-PRIN-60-2018",
+      "notation": "FSA-PRIN-60-2018",
+      "type": [
+        "http://data.food.gov.uk/food-alerts/def/Alert",
+        "http://data.food.gov.uk/food-alerts/def/PRIN"
+      ],
+      "created": "2018-11-20",
+      "modified": "2018-11-20T18:48:06.083Z",
+      "alertURL": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-60-2018",
+      "title": "Waitrose recalls two types of Christmas Prawn products due to incorrect date labelling",
+      "status": {
+        "@id": "http://data.food.gov.uk/codes/alerts/def/status/withdrawn",
+        "label": "Withdrawn"
+      },
+      "problem": [
+        {
+          "riskStatement": "The affected products have been labelled with incorrect use-by dates, and therefore could inadvertently be eaten past the date by which they can be safely consumed."
+        }
+      ],
+      "productDetails": [
+        {
+          "productName": "Waitrose 12 Breaded King Prawns",
+          "packSizeDescription": "160g",
+          "batchDescription": [
+            {
+              "useByDescription": "28 November 2018"
+            }
+          ]
+        },
+        {
+          "productName": "Waitrose Christmas 10 Spicy Prawn Selection",
+          "packSizeDescription": "245g",
+          "batchDescription": [
+            {
+              "useByDescription": "04 December 2018"
+            }
+          ]
+        }
+      ],
+      "reportingBusiness": {
+        "commonName": "Waitrose"
+      }
+    }
+  ]
+}

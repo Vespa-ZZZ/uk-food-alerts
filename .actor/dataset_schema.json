@@ -1,0 +1,79 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "type": "object",
+        "required": [
+            "id", "notation", "type", "title", "created", "modified", "status", "problem",
+            "allergens", "products", "businesses", "country", "alertUrl", "source"
+        ],
+        "properties": {
+            "id": { "type": "string", "description": "Canonical FSA alert resource URL." },
+            "notation": { "type": "string", "description": "FSA alert identifier." },
+            "type": { "type": "string", "enum": ["AA", "PRIN", "FAFA"] },
+            "title": { "type": ["string", "null"] },
+            "created": { "type": "string", "description": "FSA creation date as YYYY-MM-DD." },
+            "modified": { "type": "string", "description": "FSA last-modified timestamp." },
+            "status": { "type": ["string", "null"], "description": "For example, Published or Withdrawn." },
+            "problem": { "type": ["array", "null"], "items": { "type": "string" }, "description": "Risk statements from the structured problem field." },
+            "allergens": { "type": "array", "items": { "type": "string" }, "description": "FSA allergen labels, with notation as a fallback when a label is absent." },
+            "products": {
+                "type": ["array", "null"],
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "name": { "type": ["string", "null"] },
+                        "packSize": { "type": ["string", "null"] },
+                        "batches": {
+                            "type": ["array", "null"],
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "batchCode": { "type": ["string", "null"] },
+                                    "lotNumber": { "type": ["string", "null"] },
+                                    "bestBeforeDate": { "type": ["string", "null"] },
+                                    "bestBeforeDescription": { "type": ["string", "null"] },
+                                    "useByDate": { "type": ["string", "null"] },
+                                    "useByDescription": { "type": ["string", "null"] }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "businesses": { "type": ["array", "null"], "items": { "type": "string" }, "description": "Business names reported by the FSA, with embedded email addresses and phone numbers redacted." },
+            "country": { "type": ["array", "null"], "items": { "type": "string" }, "description": "FSA country labels. Null means no country was specified." },
+            "alertUrl": { "type": ["string", "null"], "description": "Human-readable FSA alert URL when available." },
+            "source": {
+                "type": "object",
+                "properties": {
+                    "publisher": { "type": "string" },
+                    "url": { "type": "string" },
+                    "license": { "type": "string" },
+                    "licenseUrl": { "type": "string" },
+                    "attribution": { "type": "string" }
+                }
+            }
+        }
+    },
+    "views": {
+        "overview": {
+            "title": "Alerts",
+            "transformation": {
+                "fields": ["notation", "type", "title", "status", "modified", "allergens", "country", "alertUrl"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "notation": { "label": "Alert ID", "format": "text" },
+                    "type": { "label": "Type", "format": "text" },
+                    "title": { "label": "Title", "format": "text" },
+                    "status": { "label": "Status", "format": "text" },
+                    "modified": { "label": "Modified", "format": "date" },
+                    "allergens": { "label": "Allergens", "format": "array" },
+                    "country": { "label": "Countries", "format": "array" },
+                    "alertUrl": { "label": "FSA notice", "format": "link" }
+                }
+            }
+        }
+    }
+}

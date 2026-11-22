@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "@id": "https://data.food.gov.uk/food-alerts/id.json?_view=full&_limit=10&type=FAFA",
+    "publisher": "Food Standards Agency",
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "licenseName": "OGL 3",
+    "version": "2.0.1",
+    "limit": 10
+  },
+  "items": [
+    {
+      "@id": "http://data.food.gov.uk/food-alerts/id/FSA-FAFA-01-2018",
+      "notation": "FSA-FAFA-01-2018",
+      "type": [
+        "http://data.food.gov.uk/food-alerts/def/Alert",
+        "http://data.food.gov.uk/food-alerts/def/FAFA"
+      ],
+      "created": "2018-07-10",
+      "modified": "2018-07-11T12:48:37.048Z",
+      "alertURL": "https://www.food.gov.uk/news-alerts/alert/fsa-fafa-01-2018",
+      "title": "Consumers advised about Rolkem cake decoration products",
+      "status": {
+        "@id": "http://data.food.gov.uk/codes/alerts/def/status/published",
+        "label": "Published"
+      },
+      "problem": [
+        {
+          "riskStatement": "These products are unlikely to be consumed in such levels as to cause any serious risk to health. However, we have some concerns that products may contain high levels of heavy metals, contain unapproved non-food pigments and/or other unapproved ingredients. It has not been possible to confirm the ingredients of a number of Rolkem products therefore the risk to consumers cannot be established."
+        }
+      ],
+      "productDetails": [
+        {
+          "productName": "ROLKEM (all food products such as cake craft dyes, pigments and dusts)",
+          "packSizeDescription": "All sizes",
+          "batchDescription": [
+            {
+              "batchCode": " All batch codes",
+              "lotNumber": "All lot numbers",
+              "bestBeforeDescription": "All dates",
+              "useByDescription": "All dates"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

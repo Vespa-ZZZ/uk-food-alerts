@@ -1,0 +1,14 @@
+{
+    "actorSpecification": 1,
+    "name": "uk-food-alerts",
+    "title": "UK Food Alerts (FSA)",
+    "description": "Get UK Food Standards Agency allergy alerts, product recalls and food alerts for action. Filter by allergen or title and track new alerts, updates and withdrawals.",
+    "version": "1.0",
+    "buildTag": "latest",
+    "dockerfile": "../Dockerfile",
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    }
+}

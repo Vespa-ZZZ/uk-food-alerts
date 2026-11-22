@@ -1,0 +1,61 @@
+{
+    "title": "UK Food Alerts",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "alertTypes": {
+            "title": "Alert types",
+            "description": "AA means Allergy Alert, PRIN means Product Recall Information Notice, and FAFA means Food Alert for Action. An empty list includes all three.",
+            "type": "array",
+            "editor": "select",
+            "items": { "type": "string", "enum": ["AA", "PRIN", "FAFA"] },
+            "default": ["AA", "PRIN", "FAFA"],
+            "prefill": ["AA", "PRIN", "FAFA"]
+        },
+        "allergens": {
+            "title": "Allergens",
+            "description": "Match any exact FSA allergen label or notation, ignoring case. Examples include milk, Peanuts, and gluten. Leave empty to include all alerts.",
+            "type": "array",
+            "editor": "stringList",
+            "items": { "type": "string" }
+        },
+        "since": {
+            "title": "Modified on or after",
+            "description": "Optional UTC date in YYYY-MM-DD format. When set, this takes precedence over Days back.",
+            "type": "string",
+            "editor": "textfield",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "daysBack": {
+            "title": "Days back",
+            "description": "Look for alerts modified in the last N days when no explicit date is supplied.",
+            "type": "integer",
+            "editor": "number",
+            "minimum": 1,
+            "maximum": 36500,
+            "default": 30,
+            "prefill": 30
+        },
+        "keywords": {
+            "title": "Title keywords",
+            "description": "Include alerts whose titles contain any of these phrases, ignoring case. Leave empty to include all titles.",
+            "type": "array",
+            "editor": "stringList",
+            "items": { "type": "string" }
+        },
+        "onlyNew": {
+            "title": "Monitor new and changed alerts",
+            "description": "Emit each distinct alert version once per state key. The first run includes all matching alerts in the date window.",
+            "type": "boolean",
+            "default": false
+        },
+        "stateKey": {
+            "title": "Monitoring state key",
+            "description": "Reuse this key for successive runs of one monitor. Use different keys for independent schedules or sets of filters.",
+            "type": "string",
+            "editor": "textfield",
+            "pattern": "^[A-Za-z0-9_-]{1,50}$",
+            "default": "default"
+        }
+    }
+}

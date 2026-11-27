@@ -246,3 +246,27 @@ test('keeps a successful push in state if the next dataset write fails', async (
     assert.equal(state.get('seen-stock').length, 1);
     assert.equal((await monitor([aa, prin], state)).length, 1);
 });
+
+test('prechecks the dataset item budget and allows non-PPE output', async () => {
+    for (const [isPayPerEvent, budget] of [[true, 1], [true, 0], [false, 0]]) {
+        const configureActor = (actor, records) => {
+            actor.getChargingManager = () => ({
+                getPricingInfo: () => ({ isPayPerEvent }),
+                calculateMaxEventChargeCountWithinLimit(event) {
+                    assert.equal(event, 'apify-default-dataset-item');
+                    return budget - records.length;
+                },
+            });
+        };
+        const state = new Map();
+        const input = { ...historical, onlyNew: true };
+        const { actor, rows } = mockActor(input, state);
+        configureActor(actor, rows);
+        const summary = await runActor({ actor, fetch: async () => response([aa, prin, fafa]), sleep: noSleep, now, log });
+        const expected = isPayPerEvent ? budget : 3;
+        assert.equal(rows.length, expected);
+        assert.equal(summary.pushed, expected);
+        assert.equal(summary.stopReason, isPayPerEvent ? 'spendingLimit' : undefined);
+        assert.equal(state.get('seen-default')?.length ?? 0, expected);
+    }
+});

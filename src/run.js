@@ -1,3 +1,4 @@
+import { pushDataWithinLimit } from './charging.js';
 import { fingerprint, matches, PAGE_SIZE, pageUrl, parsePage, retryAfterMs, validateInput } from './fsa.js';
 
 const INTERVAL_MS = 2350;
@@ -102,7 +103,7 @@ export async function runActor({
 
         // A single-row push keeps chargedCount unambiguous when the PPE limit is reached.
         // Free/local pushes can return chargedCount: 0 without reaching a limit.
-        const result = await actor.pushData(record);
+        const result = await pushDataWithinLimit(actor, record);
         summary.chargeLimitReached = result?.eventChargeLimitReached === true;
         if (!summary.chargeLimitReached || result.chargedCount > 0) {
             summary.pushed++;
@@ -112,6 +113,7 @@ export async function runActor({
             }
         }
         if (summary.chargeLimitReached) {
+            summary.stopReason = 'spendingLimit';
             log.warning('Pay-per-event limit reached. Versions that were not saved remain eligible for the next run.');
             break;
         }
